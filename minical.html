@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+</head>
+<body>
+    <input type="number" placeholder="Enter 1st Number" class="first">
+    <input type="number" placeholder="Enter 2nd Number" class="sec">
+    <br><br>
+    <button onclick="add()">Add</button>
+    <button onclick="sub()">Subtract</button>
+    <button onclick="mul()">Multiply</button>
+    <button onclick="divide()">Divide</button>
+</body>
+<script>
+    let firstNum = document.querySelector(".first");
+    let secNum = document.querySelector(".sec");
+
+    function add() {
+        let num1 = parseFloat(firstNum.value);
+        let num2 = parseFloat(secNum.value);
+        let result = num1 + num2;
+        alert("Result: " + result);
+    }
+
+    function sub() {
+        let num1 = parseFloat(firstNum.value);
+        let num2 = parseFloat(secNum.value);
+        let result = num1 - num2;
+        alert("Result: " + result);
+    }
+
+    function mul() {
+        let num1 = parseFloat(firstNum.value);
+        let num2 = parseFloat(secNum.value);
+        let result = num1 * num2;
+        alert("Result: " + result);
+    }
+
+    function divide() {
+        let num1 = parseFloat(firstNum.value);
+        let num2 = parseFloat(secNum.value);
+        if (num2 !== 0) {
+            let result = num1 / num2;
+            alert("Result: " + result);
+        } else {
+            alert("Division by zero is not allowed.");
+        }
+    }
+</script>
+</html>
